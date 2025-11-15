@@ -1,35 +1,17 @@
 @import './base.css';
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+  min-height: 100vh;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+.glass-surface {
+  background-color: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(18px);
+  box-shadow: var(--shadow-soft);
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+.grid-gradient {
+  background-image: radial-gradient(circle at 25% 25%, rgba(37, 99, 235, 0.08) 0, transparent 45%),
+    radial-gradient(circle at 75% 0, rgba(250, 204, 21, 0.2) 0, transparent 40%),
+    linear-gradient(135deg, rgba(37, 99, 235, 0.15), rgba(14, 165, 233, 0.05));
 }
